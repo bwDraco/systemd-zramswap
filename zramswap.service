@@ -1,0 +1,11 @@
+[Unit]
+Description=Compressed Memory Swap
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/zramswap-on.sh
+ExecStop=/usr/local/sbin/zramswap-off.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
